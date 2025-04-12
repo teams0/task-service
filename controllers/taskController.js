@@ -10,7 +10,7 @@ exports.createTask = async (req, res) => {
     // Notify notification-service
     await axios.post('http://notification-service:5003/notifications', {
       message: `Task created: ${name}`
-    });
+    });    
 
     res.status(201).json(task);
   } catch (err) {
